@@ -10,7 +10,7 @@ function insertNumber() {
         if (number < arr[0]) {
             arr.unshift(number);
             return console.log(arr);
-        } else if (number > arr[i] && number < arr[i + 1]) {
+        } else if (number >= arr[i] && number < arr[i + 1]) {
             for (let j = 0; j <= i; j++) {
                 arr1.push(arr[j]);
             }
@@ -18,7 +18,7 @@ function insertNumber() {
             for (let k = i + 1; k < arr.length; k++) {
                 arr2.push(arr[k]);
             }
-        } else {
+        } else if (number > arr[arr.length - 1]) {
             arr.push(number)
             return console.log(arr);
         }
